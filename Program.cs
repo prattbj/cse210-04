@@ -8,7 +8,8 @@ namespace Greed
     {
         static void Main(string[] args)
         {
-
+            Cast cast = new Cast();
+            
         }
     }
 }
