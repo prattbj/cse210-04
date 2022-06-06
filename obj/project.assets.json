@@ -2,16 +2,16 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "Raylib-cs/3.7.0.1": {
+      "Raylib-cs/4.0.0.1": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
         },
         "compile": {
-          "lib/netstandard2.1/Raylib-cs.dll": {}
+          "lib/net6.0/Raylib-cs.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.1/Raylib-cs.dll": {}
+          "lib/net6.0/Raylib-cs.dll": {}
         },
         "runtimeTargets": {
           "runtimes/linux-x64/native/libraylib.so": {
@@ -44,16 +44,19 @@
     }
   },
   "libraries": {
-    "Raylib-cs/3.7.0.1": {
-      "sha512": "DN9MC1QyyUFd5rskN9czcZ0w1DjvZ23vaJmwexaPOqQ0b0qJppq1hL0jWfl3fzAANJ59ZxuyUyMF6gSIM7QuWg==",
+    "Raylib-cs/4.0.0.1": {
+      "sha512": "P8VqY5UsEawOoWElEcLNmLu08zOpvkk5C7eI0OKR8fDL7v6bPkFchC8iUJI47BgPq0lYsQbnMeEOe2bz/HZ5bA==",
       "type": "package",
-      "path": "raylib-cs/3.7.0.1",
+      "path": "raylib-cs/4.0.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/netstandard2.1/Raylib-cs.dll",
-        "lib/netstandard2.1/Raylib-cs.xml",
-        "raylib-cs.3.7.0.1.nupkg.sha512",
+        "README.md",
+        "lib/net5.0/Raylib-cs.dll",
+        "lib/net5.0/Raylib-cs.xml",
+        "lib/net6.0/Raylib-cs.dll",
+        "lib/net6.0/Raylib-cs.xml",
+        "raylib-cs.4.0.0.1.nupkg.sha512",
         "raylib-cs.nuspec",
         "raylib-cs_64x64.png",
         "runtimes/linux-x64/native/libraylib.so",
@@ -112,23 +115,23 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "raylib-cs >= 3.7.0.1"
+      "raylib-cs >= 4.0.0.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jacob\\.nuget\\packages\\": {}
+    "C:\\Users\\joshj\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\jacob\\OneDrive\\Desktop\\CSE210\\Projects\\cse210-04\\cse210-04.csproj",
+      "projectUniqueName": "C:\\Users\\joshj\\Documents\\cse210\\greed\\cse210-04\\cse210-04.csproj",
       "projectName": "cse210-04",
-      "projectPath": "c:\\Users\\jacob\\OneDrive\\Desktop\\CSE210\\Projects\\cse210-04\\cse210-04.csproj",
-      "packagesPath": "C:\\Users\\jacob\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\jacob\\OneDrive\\Desktop\\CSE210\\Projects\\cse210-04\\obj\\",
+      "projectPath": "C:\\Users\\joshj\\Documents\\cse210\\greed\\cse210-04\\cse210-04.csproj",
+      "packagesPath": "C:\\Users\\joshj\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\joshj\\Documents\\cse210\\greed\\cse210-04\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jacob\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\joshj\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -154,7 +157,7 @@
         "dependencies": {
           "raylib-cs": {
             "target": "Package",
-            "version": "[3.7.0.1, )"
+            "version": "[4.0.0.1, )"
           }
         },
         "imports": [
