@@ -2,11 +2,14 @@
  
 Classes:
 
+KeyboardService
 VideoService
 Program
 Director
+Cast
 Score
-FallingObject
-    Rock
-    Gem
-Player
+Actor
+    Player
+    FallingObject
+        Rock
+        Gem
