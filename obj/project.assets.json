@@ -119,11 +119,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\joshj\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\benny\\.nuget\\packages\\": {}
+>>>>>>> a9fb36f931394df6e7f8ca97fe9d69d9df56aed7
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\joshj\\Documents\\cse210\\greed\\cse210-04\\cse210-04.csproj",
       "projectName": "cse210-04",
       "projectPath": "C:\\Users\\joshj\\Documents\\cse210\\greed\\cse210-04\\cse210-04.csproj",
@@ -132,6 +137,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\joshj\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+      "projectUniqueName": "C:\\Users\\benny\\cse210\\cse210-04\\cse210-04.csproj",
+      "projectName": "cse210-04",
+      "projectPath": "C:\\Users\\benny\\cse210\\cse210-04\\cse210-04.csproj",
+      "packagesPath": "C:\\Users\\benny\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\benny\\cse210\\cse210-04\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\benny\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> a9fb36f931394df6e7f8ca97fe9d69d9df56aed7
       ],
       "originalTargetFrameworks": [
         "net6.0"

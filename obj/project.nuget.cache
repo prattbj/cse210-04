@@ -1,11 +1,20 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "tBpoqo6CCvNeWY6Z7bYWcDIB3fRLzoS1oxkvUeJG15VrniBTWvyz4f3sUeEbumZv7NpBmMV7KDbLNqd+HzNOLA==",
   "success": true,
   "projectFilePath": "C:\\Users\\joshj\\Documents\\cse210\\greed\\cse210-04\\cse210-04.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\joshj\\.nuget\\packages\\raylib-cs\\4.0.0.1\\raylib-cs.4.0.0.1.nupkg.sha512",
     "C:\\Users\\joshj\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+=======
+  "dgSpecHash": "nZDeXeLt8JkCqSL5IBRS5wWuXuLM19u7eKcfRRdYWc40n4byFGXH+xbyjudAmF8s/FVx6Pe/oWulpS8l3U0YAg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\benny\\cse210\\cse210-04\\cse210-04.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\benny\\.nuget\\packages\\raylib-cs\\4.0.0.1\\raylib-cs.4.0.0.1.nupkg.sha512",
+    "C:\\Users\\benny\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+>>>>>>> a9fb36f931394df6e7f8ca97fe9d69d9df56aed7
   ],
   "logs": []
 }
