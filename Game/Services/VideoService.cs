@@ -62,11 +62,11 @@ namespace Game.Services
         /// <param name="actor">The actor to draw.</param>
         public void DrawActor(Actor actor)
         {
-            string text = actor.GetText();
-            int x = actor.GetPosition().GetX();
-            int y = actor.GetPosition().GetY();
-            int fontSize = actor.GetFontSize();
-            Casting.Color c = actor.GetColor();
+            string text = actor.getText();
+            int x = actor.getX();
+            int y = actor.getY();
+            int fontSize = actor.getFontSize();
+            Casting.Color c = actor.getColor();
             Raylib_cs.Color color = ToRaylibColor(c);
             Raylib.DrawText(text, x, y, fontSize, color);
         }
