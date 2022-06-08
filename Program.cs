@@ -23,13 +23,13 @@ namespace Greed
             {
                 // Set up canvas to start drawing and set the background to black
                 Raylib.BeginDrawing();
-                Raylib.ClearBackground(Color.BLACK);
+                Raylib.ClearBackground(Raylib_cs.Color.BLACK);
                 // Display Current FPS
                 Raylib.DrawFPS(0, 0); 
 
                 // Draw rocks and gems (x, y, font-size)
-                Raylib.DrawText("*", 12, 10, 20, Color.WHITE);
-                Raylib.DrawText("O", 100, 20, 20, Color.BLUE);
+                Raylib.DrawText("*", 12, 10, 20, Raylib_cs.Color.WHITE);
+                Raylib.DrawText("O", 100, 20, 20, Raylib_cs.Color.BLUE);
 
                 Raylib.EndDrawing();
             }
