@@ -10,11 +10,11 @@ namespace Game.Casting
             return score;
         }
 
-        public changeScore(FallingObject fallingObject) {
+        public void changeScore(FallingObject fallingObject) {
             score += fallingObject.scoreIncrement;
-        }
+        }   
 
-        private updateScoreText() {
+        private void updateScoreText() {
             this.text = $"Score: {this.score}";
         }
     }
