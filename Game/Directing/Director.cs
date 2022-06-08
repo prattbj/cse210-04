@@ -52,7 +52,7 @@ namespace Game.Directing
         {
             Actor player = cast.GetFirstActor("robot");
             int direction = keyboardService.GetDirection();
-            player.SetDirection(direction);     
+            this.player.SetDirection(direction);     
         }
 
         /// <summary>

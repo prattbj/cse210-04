@@ -29,7 +29,7 @@ namespace Greed
                 // Draw rocks and gems (x, y, font-size)
                 Raylib.DrawText("*", 12, 10, 20, Raylib_cs.Color.WHITE);
                 Raylib.DrawText("O", 100, 20, 20, Raylib_cs.Color.BLUE);
-
+                
                 Raylib.EndDrawing();
             }
 
