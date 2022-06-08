@@ -1,18 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "nRjEUh4lu9yYbnSX5+WJw+Abk7aBXwyy6vFDtTp6a3VvuxrpLu7OIL0UI7Q53GSaWvBesqWa/KymUJ8TXYR99w==",
+  "dgSpecHash": "tBpoqo6CCvNeWY6Z7bYWcDIB3fRLzoS1oxkvUeJG15VrniBTWvyz4f3sUeEbumZv7NpBmMV7KDbLNqd+HzNOLA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\jacob\\OneDrive\\Desktop\\CSE210\\Projects\\cse210-04\\cse210-04.csproj",
+  "projectFilePath": "C:\\Users\\joshj\\Documents\\cse210\\greed\\cse210-04\\cse210-04.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\jacob\\.nuget\\packages\\raylib-cs\\4.0.0.1\\raylib-cs.4.0.0.1.nupkg.sha512",
-    "C:\\Users\\jacob\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+    "C:\\Users\\joshj\\.nuget\\packages\\raylib-cs\\4.0.0.1\\raylib-cs.4.0.0.1.nupkg.sha512",
+    "C:\\Users\\joshj\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file c:\\Users\\jacob\\OneDrive\\Desktop\\CSE210\\Projects\\cse210-04\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

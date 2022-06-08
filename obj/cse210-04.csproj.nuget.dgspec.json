@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\jacob\\OneDrive\\Desktop\\CSE210\\Projects\\cse210-04\\cse210-04.csproj": {}
+    "C:\\Users\\joshj\\Documents\\cse210\\greed\\cse210-04\\cse210-04.csproj": {}
   },
   "projects": {
-    "c:\\Users\\jacob\\OneDrive\\Desktop\\CSE210\\Projects\\cse210-04\\cse210-04.csproj": {
+    "C:\\Users\\joshj\\Documents\\cse210\\greed\\cse210-04\\cse210-04.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\jacob\\OneDrive\\Desktop\\CSE210\\Projects\\cse210-04\\cse210-04.csproj",
+        "projectUniqueName": "C:\\Users\\joshj\\Documents\\cse210\\greed\\cse210-04\\cse210-04.csproj",
         "projectName": "cse210-04",
-        "projectPath": "c:\\Users\\jacob\\OneDrive\\Desktop\\CSE210\\Projects\\cse210-04\\cse210-04.csproj",
-        "packagesPath": "C:\\Users\\jacob\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\jacob\\OneDrive\\Desktop\\CSE210\\Projects\\cse210-04\\obj\\",
+        "projectPath": "C:\\Users\\joshj\\Documents\\cse210\\greed\\cse210-04\\cse210-04.csproj",
+        "packagesPath": "C:\\Users\\joshj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\joshj\\Documents\\cse210\\greed\\cse210-04\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jacob\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\joshj\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
