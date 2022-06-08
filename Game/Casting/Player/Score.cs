@@ -12,6 +12,7 @@ namespace Game.Casting
 
         public void changeScore(FallingObject fallingObject) {
             score += fallingObject.getScore();
+            updateScoreText();
         }   
 
         private void updateScoreText() {

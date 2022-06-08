@@ -16,6 +16,7 @@ namespace Game.Directing
         private KeyboardService keyboardService = null;
         private VideoService videoService = null;
         private Player player = new Player();
+        private Score score = new Score();
 
         /// <summary>
         /// Constructs a new instance of Director using the given KeyboardService and VideoService.
@@ -76,6 +77,20 @@ namespace Game.Directing
                 o.setPosition();
 
             }
+        
+            
+            int maxX = videoService.GetWidth();
+            int maxY = videoService.GetHeight();
+            player.MoveNext(maxX, maxY);
+
+            foreach (Actor fallingObject in fallingObjects)
+            {
+                if (player.GetPosition().Equals(fallingObject.GetPosition()))
+                {
+                    score.changeScore(fallingObject);
+                }
+            } 
+        }
 
         /// <summary>
         /// Draws the actors on the screen.
