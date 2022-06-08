@@ -15,6 +15,7 @@ namespace Game.Directing
     {
         private KeyboardService keyboardService = null;
         private VideoService videoService = null;
+        private Player player = new Player();
 
         /// <summary>
         /// Constructs a new instance of Director using the given KeyboardService and VideoService.
@@ -51,7 +52,7 @@ namespace Game.Directing
         {
             Actor player = cast.GetFirstActor("robot");
             int direction = keyboardService.GetDirection();
-            robot.SetVelocity(velocity);     
+            player.SetDirection(direction);     
         }
 
         /// <summary>
@@ -63,7 +64,7 @@ namespace Game.Directing
             Actor banner = cast.GetFirstActor("banner");
             Actor robot = cast.GetFirstActor("robot");
             List<Actor> artifacts = cast.GetActors("artifacts");
-
+            player.SetPosition();
             banner.SetText("");
             int maxX = videoService.GetWidth();
             int maxY = videoService.GetHeight();

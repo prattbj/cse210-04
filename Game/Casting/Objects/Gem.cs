@@ -2,9 +2,12 @@ namespace Game.Casting
 {
     class Gem : FallingObject
     {
-        public Gem() 
+        public Gem()
         {
-            this.scoreIncrement = 1;
+            setText("*");
+            setScoreIncrement(getVelocity());
         }
+
+        
     }
 }
