@@ -49,5 +49,9 @@ namespace Game.Casting
         {
             return this.color;
         }
+        public void setText(string text)
+        {
+            this.text = text;
+        }
     }
 }

@@ -50,7 +50,7 @@ namespace Game.Directing
         private void GetInputs(Cast cast)
         {
             Actor player = cast.GetFirstActor("robot");
-            Point velocity = keyboardService.GetDirection();
+            int direction = keyboardService.GetDirection();
             robot.SetVelocity(velocity);     
         }
 
