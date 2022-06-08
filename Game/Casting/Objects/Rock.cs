@@ -2,7 +2,6 @@ namespace Game.Casting
 {
     class Rock : FallingObject
     {
-        
         public Rock()
         {
             setText("▯");

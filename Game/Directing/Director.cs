@@ -16,6 +16,7 @@ namespace Game.Directing
         private KeyboardService keyboardService = null;
         private VideoService videoService = null;
         private Player player = new Player();
+        private Score score = new Score();
 
         /// <summary>
         /// Constructs a new instance of Director using the given KeyboardService and VideoService.
@@ -50,7 +51,7 @@ namespace Game.Directing
         /// <param name="cast">The given cast.</param>
         private void GetInputs(Cast cast)
         {
-            Actor player = cast.GetFirstActor("robot");
+            Actor player = cast.GetFirstActor("player");
             int direction = keyboardService.GetDirection();
             this.player.SetDirection(direction);     
         }
@@ -62,21 +63,19 @@ namespace Game.Directing
         private void DoUpdates(Cast cast)
         {
             Actor banner = cast.GetFirstActor("banner");
-            Actor robot = cast.GetFirstActor("robot");
-            List<Actor> artifacts = cast.GetActors("artifacts");
+            Actor player = cast.GetFirstActor("player");
+            List<Actor> fallingObjects = cast.GetActors("fallingObjects");
             player.SetPosition();
             banner.SetText("");
             int maxX = videoService.GetWidth();
             int maxY = videoService.GetHeight();
-            robot.MoveNext(maxX, maxY);
+            player.MoveNext(maxX, maxY);
 
-            foreach (Actor actor in artifacts)
+            foreach (Actor fallingObject in fallingObjects)
             {
-                if (robot.GetPosition().Equals(actor.GetPosition()))
+                if (player.GetPosition().Equals(fallingObject.GetPosition()))
                 {
-                    Artifact artifact = (Artifact) actor;
-                    string message = artifact.GetMessage();
-                    banner.SetText(message);
+                    score.changeScore(fallingObject);
                 }
             } 
         }
