@@ -26,7 +26,7 @@ namespace Game.Casting
         }
         public void setY(int change)
         {
-            x += change;
+            y += change;
         }
 
         public int getX()

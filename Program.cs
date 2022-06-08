@@ -11,13 +11,15 @@ namespace Greed
 {
     class Program
     {
+        private static Cast cast = new Cast();
         static void Main(string[] args)
         {
 
             Raylib.InitWindow(800, 480, "Greed");
             Raylib.SetTargetFPS(60); 
             int yMax = 15;
-
+            Gem gem = new Gem();
+            cast.AddActor("fallingobject", gem);
             while (!Raylib.WindowShouldClose())
             {
                 // Set up canvas to start drawing and set the background to black

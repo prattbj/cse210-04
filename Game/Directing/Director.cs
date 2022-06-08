@@ -50,36 +50,32 @@ namespace Game.Directing
         /// <param name="cast">The given cast.</param>
         private void GetInputs(Cast cast)
         {
-            Actor player = cast.GetFirstActor("robot");
+            Actor player = cast.GetFirstActor("player");
             int direction = keyboardService.GetDirection();
             this.player.SetDirection(direction);     
         }
 
         /// <summary>
-        /// Updates the robot's position and resolves any collisions with artifacts.
+        /// Updates the player's position and the position of the falling objects
         /// </summary>
         /// <param name="cast">The given cast.</param>
         private void DoUpdates(Cast cast)
         {
-            Actor banner = cast.GetFirstActor("banner");
-            Actor robot = cast.GetFirstActor("robot");
-            List<Actor> artifacts = cast.GetActors("artifacts");
+            Actor score = cast.GetFirstActor("score");
+            Actor player = cast.GetFirstActor("player");
+            List<Actor> fallingObject = cast.GetActors("fallingobject");
             player.SetPosition();
-            banner.SetText("");
+            score.updateScoreText();
             int maxX = videoService.GetWidth();
             int maxY = videoService.GetHeight();
-            robot.MoveNext(maxX, maxY);
-
-            foreach (Actor actor in artifacts)
+            player.MoveNext(maxX, maxY);
+            
+            foreach (Actor actor in fallingObject)
             {
-                if (robot.GetPosition().Equals(actor.GetPosition()))
-                {
-                    Artifact artifact = (Artifact) actor;
-                    string message = artifact.GetMessage();
-                    banner.SetText(message);
-                }
-            } 
-        }
+                FallingObject o = (FallingObject) actor;
+                o.setPosition();
+
+            }
 
         /// <summary>
         /// Draws the actors on the screen.
