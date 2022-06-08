@@ -16,20 +16,24 @@ namespace Greed
 
             Raylib.InitWindow(800, 480, "Greed");
             Raylib.SetTargetFPS(60); 
-            int yMax = 15;
+            int y = 0;
+
+            
 
             while (!Raylib.WindowShouldClose())
             {
-                // Set up canvas to start drawing and set the background to black
-                Raylib.BeginDrawing();
-                Raylib.ClearBackground(Raylib_cs.Color.BLACK);
-                // Display Current FPS
-                Raylib.DrawFPS(0, 0); 
+                // Object drops by 1 pixel each frame
+                y += 1;
 
-                // Draw rocks and gems (x, y, font-size)
-                Raylib.DrawText("*", 12, 10, 20, Raylib_cs.Color.WHITE);
-                Raylib.DrawText("O", 100, 20, 20, Raylib_cs.Color.BLUE);
-                
+                // Begin output phase
+                Raylib.BeginDrawing();
+                Raylib.ClearBackground(Color.BLACK);
+                Raylib.DrawFPS(0, 0); 
+                // VideoService videoService = new VideoService();
+ 
+                Raylib.DrawText("*", 12, y, 20, Color.WHITE);
+                Raylib.DrawText("O", 100, y, 20, Color.BLUE);
+
                 Raylib.EndDrawing();
             }
 
