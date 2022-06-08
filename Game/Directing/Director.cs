@@ -62,11 +62,9 @@ namespace Game.Directing
         /// <param name="cast">The given cast.</param>
         private void DoUpdates(Cast cast)
         {
-            Actor banner = cast.GetFirstActor("banner");
             Actor player = cast.GetFirstActor("player");
             List<Actor> fallingObjects = cast.GetActors("fallingObjects");
             player.SetPosition();
-            banner.SetText("");
             int maxX = videoService.GetWidth();
             int maxY = videoService.GetHeight();
             player.MoveNext(maxX, maxY);
