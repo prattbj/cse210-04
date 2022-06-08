@@ -2,6 +2,11 @@ namespace Game.Casting
 {
     class Rock : FallingObject
     {
-        private int scoreIncrement = -1;
+        
+        public Rock()
+        {
+            setText("▯");
+            setScoreIncrement(-getVelocity());
+        }
     }
 }
