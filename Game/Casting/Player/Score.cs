@@ -10,8 +10,8 @@ namespace Game.Casting
             return score;
         }
 
-        public changeScore(FallingObject object) {
-            score += object.scoreIncrement;
+        public changeScore(FallingObject fallingObject) {
+            score += fallingObject.scoreIncrement;
         }
 
         private updateScoreText() {
