@@ -5,14 +5,19 @@ namespace Game.Casting
     {
         private Random random = new Random();
         private int velocity = 0;
-        public FallingObject(int velocity)
+        public FallingObject()
         {
-            this.velocity = velocity;
+            this.velocity = random.Next(1, 5);
             
         }
         public int getVelocity()
         {
             return this.velocity;
+        }
+
+        public void setPosition()
+        {
+            setY(velocity);
         }
     }
 }

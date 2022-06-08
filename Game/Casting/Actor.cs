@@ -20,6 +20,15 @@ namespace Game.Casting
 
         }
 
+        public void setX(int change)
+        {
+            x += change;
+        }
+        public void setY(int change)
+        {
+            x += change;
+        }
+
         public int getX()
         {
             return this.x;
