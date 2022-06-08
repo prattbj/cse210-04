@@ -5,6 +5,7 @@ namespace Game.Casting
     {
         private Random random = new Random();
         private int velocity = 0;
+        private int scoreIncrement = 0;
         public FallingObject()
         {
             this.velocity = random.Next(1, 5);

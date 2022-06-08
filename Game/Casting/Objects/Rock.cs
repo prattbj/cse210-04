@@ -2,6 +2,9 @@ namespace Game.Casting
 {
     class Rock : FallingObject
     {
-        private int scoreIncrement = -1;
+        public Rock() 
+        {
+            this.scoreIncrement = -1;
+        }
     }
 }
