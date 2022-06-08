@@ -6,7 +6,7 @@ namespace Game.Casting
         public Score() {
         }
         
-        public getScore() {
+        public int getScore() {
             return score;
         }
 
