@@ -1,37 +1,20 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "C:\\Users\\joshj\\Documents\\cse210\\greed\\cse210-04\\cse210-04.csproj": {}
+    "c:\\Users\\jacob\\OneDrive\\Desktop\\CSE210\\Projects\\cse210-04\\cse210-04.csproj": {}
   },
   "projects": {
-    "C:\\Users\\joshj\\Documents\\cse210\\greed\\cse210-04\\cse210-04.csproj": {
+    "c:\\Users\\jacob\\OneDrive\\Desktop\\CSE210\\Projects\\cse210-04\\cse210-04.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joshj\\Documents\\cse210\\greed\\cse210-04\\cse210-04.csproj",
+        "projectUniqueName": "c:\\Users\\jacob\\OneDrive\\Desktop\\CSE210\\Projects\\cse210-04\\cse210-04.csproj",
         "projectName": "cse210-04",
-        "projectPath": "C:\\Users\\joshj\\Documents\\cse210\\greed\\cse210-04\\cse210-04.csproj",
-        "packagesPath": "C:\\Users\\joshj\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joshj\\Documents\\cse210\\greed\\cse210-04\\obj\\",
+        "projectPath": "c:\\Users\\jacob\\OneDrive\\Desktop\\CSE210\\Projects\\cse210-04\\cse210-04.csproj",
+        "packagesPath": "C:\\Users\\jacob\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\jacob\\OneDrive\\Desktop\\CSE210\\Projects\\cse210-04\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\joshj\\AppData\\Roaming\\NuGet\\NuGet.Config"
-=======
-    "C:\\Users\\benny\\cse210\\cse210-04\\cse210-04.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\benny\\cse210\\cse210-04\\cse210-04.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\benny\\cse210\\cse210-04\\cse210-04.csproj",
-        "projectName": "cse210-04",
-        "projectPath": "C:\\Users\\benny\\cse210\\cse210-04\\cse210-04.csproj",
-        "packagesPath": "C:\\Users\\benny\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\benny\\cse210\\cse210-04\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\benny\\AppData\\Roaming\\NuGet\\NuGet.Config"
->>>>>>> a9fb36f931394df6e7f8ca97fe9d69d9df56aed7
+          "C:\\Users\\jacob\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"

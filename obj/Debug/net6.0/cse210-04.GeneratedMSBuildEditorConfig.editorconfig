@@ -7,8 +7,4 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = cse210_04
-<<<<<<< HEAD
-build_property.ProjectDir = c:\Users\joshj\Documents\cse210\greed\cse210-04\
-=======
-build_property.ProjectDir = c:\Users\benny\cse210\cse210-04\
->>>>>>> a9fb36f931394df6e7f8ca97fe9d69d9df56aed7
+build_property.ProjectDir = c:\Users\jacob\OneDrive\Desktop\CSE210\Projects\cse210-04\
