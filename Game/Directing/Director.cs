@@ -75,21 +75,11 @@ namespace Game.Directing
             {
                 FallingObject o = (FallingObject) actor;
                 o.setPosition();
-
-            }
-        
-            
-            int maxX = videoService.GetWidth();
-            int maxY = videoService.GetHeight();
-            player.MoveNext(maxX, maxY);
-
-            foreach (Actor fallingObject in fallingObjects)
-            {
-                if (player.GetPosition().Equals(fallingObject.GetPosition()))
+                if (player.GetPosition().Equals(o.GetPosition()))
                 {
                     score.changeScore(fallingObject);
                 }
-            } 
+            }
         }
 
         /// <summary>
