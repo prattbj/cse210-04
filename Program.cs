@@ -13,6 +13,7 @@ namespace Greed
     {
         static void Main(string[] args)
         {
+<<<<<<< HEAD
             Raylib.InitWindow(800, 480, "Greed");
             Raylib.SetTargetFPS(60); 
             int yMax = 15;
@@ -33,6 +34,10 @@ namespace Greed
             }
 
             Raylib.CloseWindow();
+=======
+            Cast cast = new Cast();
+            
+>>>>>>> 28cae7084b3df27192ff6ffce9d16a0f0167adc5
         }
     }
 }
