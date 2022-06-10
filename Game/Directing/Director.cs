@@ -15,8 +15,7 @@ namespace Game.Directing
     {
         private KeyboardService keyboardService = null;
         private VideoService videoService = null;
-        private Player player = new Player();
-        private Score score = new Score();
+
 
         /// <summary>
         /// Constructs a new instance of Director using the given KeyboardService and VideoService.
@@ -51,9 +50,9 @@ namespace Game.Directing
         /// <param name="cast">The given cast.</param>
         private void GetInputs(Cast cast)
         {
-            Actor player = cast.GetFirstActor("player");
+            Player player = (Player) cast.GetFirstActor("player");
             int direction = keyboardService.GetDirection();
-            this.player.SetDirection(direction);     
+            player.SetDirection(direction);     
         }
 
         /// <summary>
@@ -62,22 +61,20 @@ namespace Game.Directing
         /// <param name="cast">The given cast.</param>
         private void DoUpdates(Cast cast)
         {
-            Actor score = cast.GetFirstActor("score");
-            Actor player = cast.GetFirstActor("player");
+            Score score = (Score) cast.GetFirstActor("score");
+            Player player = (Player) cast.GetFirstActor("player");
             List<Actor> fallingObject = cast.GetActors("fallingobject");
             player.SetPosition();
-            score.updateScoreText();
-            int maxX = videoService.GetWidth();
-            int maxY = videoService.GetHeight();
-            player.MoveNext(maxX, maxY);
+            
+
             
             foreach (Actor actor in fallingObject)
             {
                 FallingObject o = (FallingObject) actor;
                 o.setPosition();
-                if (player.GetPosition().Equals(o.GetPosition()))
+                if (player.getX().Equals(o.getX()) && player.getY().Equals(o.getY()))
                 {
-                    score.changeScore(fallingObject);
+                    score.changeScore(o.getVelocity());
                 }
             }
         }

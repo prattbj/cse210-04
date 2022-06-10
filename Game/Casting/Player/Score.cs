@@ -10,8 +10,8 @@ namespace Game.Casting
             return score;
         }
 
-        public void changeScore(FallingObject fallingObject) {
-            score += fallingObject.getScore();
+        public void changeScore(int velocity) {
+            score += velocity;
             updateScoreText();
         }   
 
