@@ -84,7 +84,7 @@ namespace Game.Directing
             {
                 FallingObject o = (FallingObject) actor;
                 o.setPosition();
-                if ((((player.getX() + 2) > o.getX()) && ((player.getY() - 2) < o.getY()))&& ((player.getY() + 2) > o.getY()) && ((player.getY() - 2) < o.getY()))
+                if ((480 > o.getY() && o.getY() > 455) && (player.getX() + 15 > o.getX()) && (player.getX() - 15 < o.getX()))
                 {
                     score.changeScore(o.getScore());
                     if (score.getScore() < 0)
@@ -100,7 +100,7 @@ namespace Game.Directing
             }
 
             try {
-                if (random.Next(1, (2 + 20/(score.getScore() + 1))) == 1)
+                if (random.Next(1, (2 + 200/(score.getScore() + 1))) == 1)
                 {
                     //create gem or rock
                     if (random.Next(1, 3) == 1)
