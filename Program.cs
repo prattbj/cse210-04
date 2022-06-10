@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using Game.Directing;
+﻿using Game.Directing;
 using Game.Services;
 using Game.Casting;
-using Raylib_cs;
 
 namespace Greed
 {
