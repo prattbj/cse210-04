@@ -71,7 +71,9 @@ namespace Game.Directing
             Score score = (Score) cast.GetFirstActor("score");
             Player player = (Player) cast.GetFirstActor("player");
             List<Actor> fallingObject = cast.GetActors("fallingobject");
-            player.SetPosition();
+            if (player.getX() <= 780 && keyboardService.GetDirection() == 1 || player.getX() >= 5 && keyboardService.GetDirection() == -1) {
+                player.SetPosition();
+            }
             
 
             foreach (Actor actor in fallingObject)
