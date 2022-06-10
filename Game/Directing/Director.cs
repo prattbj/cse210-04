@@ -39,6 +39,7 @@ namespace Game.Directing
             videoService.OpenWindow();
             Player player = new Player();
             Score score = new Score();
+            score.changeScore(0);
             cast.AddActor("player", player);
             cast.AddActor("score", score);
             while (videoService.IsWindowOpen())
