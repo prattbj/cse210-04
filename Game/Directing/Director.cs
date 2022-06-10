@@ -80,7 +80,7 @@ namespace Game.Directing
                 o.setPosition();
                 if (player.getX().Equals(o.getX()) && player.getY().Equals(o.getY()))
                 {
-                    score.changeScore(o.getVelocity());
+                    score.changeScore(o.getScore());
                     cast.RemoveActor("fallingobject", o);
                 } else if (o.getY() == 485)
                 {
@@ -88,20 +88,23 @@ namespace Game.Directing
                 }
             }
 
-            if (random.Next(1, (1 + 1/(score.getScore() + 1))) == 1)
-            {
-                //create gem or rock
-                if (random.Next(1, 3) == 1)
+            try {
+                if (random.Next(1, (1 + 1/(score.getScore() + 1))) == 1)
                 {
-                    Gem gem = new Gem();
-                    cast.AddActor("fallingobject", gem);
-                } else
-                {
-                    Rock rock = new Rock();
-                    cast.AddActor("fallingobject", rock);
+                    //create gem or rock
+                    if (random.Next(1, 3) == 1)
+                    {
+                        Gem gem = new Gem();
+                        cast.AddActor("fallingobject", gem);
+                    } else
+                    {
+                        Rock rock = new Rock();
+                        cast.AddActor("fallingobject", rock);
+                    }
                 }
+            } catch (DivideByZeroException) {
+                score.changeScore(0);
             }
-
         }
 
         /// <summary>
