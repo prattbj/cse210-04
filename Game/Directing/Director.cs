@@ -77,7 +77,12 @@ namespace Game.Directing
             || player.getX() >= 5 && keyboardService.GetDirection() == -1) {
                 player.SetPosition();
             }
-            
+            //Create i for iteration in order to remove the correct falling objects from the
+            //cast (based on index). For each falling object, set the position, then check for 
+            //a collision within 15 px of the player if the object is in a certain range of y
+            //values at the bottom of the screen.
+            //Deletes the object if there is a collision or if it goes off the screen.
+            //Changes the score if there is a collision.
             int i = 0;
             foreach (Actor actor in fallingObject)
             {
@@ -97,7 +102,9 @@ namespace Game.Directing
                 }
                 i++;
             }
-
+            //Need to catch divide by zero exceptions, so we use try - catch. 
+            //As the score increases, the function (2 + 200/(score + 1)) tends to 1 and more
+            //rocks and gems will randomly spawn because of the random function.
             try {
                 if (random.Next(1, (2 + 200/(score.getScore() + 1))) == 1)
                 {

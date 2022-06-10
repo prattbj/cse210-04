@@ -71,7 +71,7 @@ namespace Game.Casting
             return result;
         }
 
-        /// Removes the given actor from the given group.
+        /// Removes the given actor from the given group based on the index.
         public void RemoveActor(string group, Actor actor, int index)
         {
             if (actors.ContainsKey(group))
