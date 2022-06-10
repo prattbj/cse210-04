@@ -4,6 +4,8 @@ namespace Game.Casting
         private int score;
 
         public Score() {
+            this.setX(50);
+            this.setY(50);
         }
         
         public int getScore() {
