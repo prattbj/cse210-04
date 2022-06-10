@@ -4,12 +4,7 @@ using Game.Casting;
 
 namespace Game.Services
 {
-        /// <summary>
-    /// <para>Outputs the game state.</para>
-    /// <para>
-    /// The responsibility of the class of objects is to draw the game state on the screen. 
-    /// </para>
-    /// </summary>
+    /// The responsibility of the VideoService class is to draw the game state on the screen. 
     public class VideoService
     {
         private int cellSize = 15;
@@ -19,10 +14,7 @@ namespace Game.Services
         private int frameRate = 0;
         private bool debug = false;
 
-        /// <summary>
         /// Constructs a new instance of KeyboardService using the given cell size.
-        /// </summary>
-        /// <param name="cellSize">The cell size (in pixels).</param>
         public VideoService(string caption, int width, int height, int cellSize, int frameRate, 
                 bool debug)
         {
@@ -34,32 +26,24 @@ namespace Game.Services
             this.debug = debug;
         }
 
-        /// <summary>
         /// Closes the window and releases all resources.
-        /// </summary>
         public void CloseWindow()
         {
             Raylib.CloseWindow();
         }
 
-        /// <summary>
-        /// Clears the buffer in preparation for the next rendering. This method should be called at
-        /// the beginning of the game's output phase.
-        /// </summary>
+        /// Clears the buffer in preparation for the next rendering. Called at the beginning each output phase.
         public void ClearBuffer()
         {
             Raylib.BeginDrawing();
             Raylib.ClearBackground(Raylib_cs.Color.BLACK);
-            if (debug)
-            {
-                DrawGrid();
-            }
+            // if (debug)
+            // {
+            //     DrawGrid();
+            // }
         }
 
-        /// <summary>
-        /// Draws the given actor's text on the screen.
-        /// </summary>
-        /// <param name="actor">The actor to draw.</param>
+        /// Draws the given actor on the screen.
         public void DrawActor(Actor actor)
         {
             string text = actor.getText();
@@ -71,10 +55,7 @@ namespace Game.Services
             Raylib.DrawText(text, x, y, fontSize, color);
         }
 
-        /// <summary>
         /// Draws the given list of actors on the screen.
-        /// </summary>
-        /// <param name="actors">The list of actors to draw.</param>
         public void DrawActors(List<Actor> actors)
         {
             foreach (Actor actor in actors)
@@ -83,80 +64,57 @@ namespace Game.Services
             }
         }
         
-        /// <summary>
-        /// Copies the buffer contents to the screen. This method should be called at the end of
-        /// the game's output phase.
-        /// </summary>
+        /// Copies the buffer contents to the screen. This method is called at the end of the output phase.
         public void FlushBuffer()
         {
             Raylib.EndDrawing();
         }
 
-        /// <summary>
-        /// Gets the grid's cell size.
-        /// </summary>
-        /// <returns>The cell size.</returns>
-        public int GetCellSize()
-        {
-            return cellSize;
-        }
+        /// Gets the grid's cell size. This function is not used
+        // public int GetCellSize()
+        // {
+        //     return cellSize;
+        // }
 
-        /// <summary>
         /// Gets the screen's height.
-        /// </summary>
-        /// <returns>The height (in pixels).</returns>
-        public int GetHeight()
-        {
-            return height;
-        }
+        // public int GetHeight()
+        // {
+        //     return height;
+        // }
 
-        /// <summary>
         /// Gets the screen's width.
-        /// </summary>
-        /// <returns>The width (in pixels).</returns>
-        public int GetWidth()
-        {
-            return width;
-        }
+        // public int GetWidth()
+        // {
+        //     return width;
+        // }
 
-        /// <summary>
-        /// Whether or not the window is still open.
-        /// </summary>
-        /// <returns>True if the window is open; false if otherwise.</returns>
+        /// Whether or not the window is still open. (t/f)
         public bool IsWindowOpen()
         {
             return !Raylib.WindowShouldClose();
         }
 
-        /// <summary>
         /// Opens a new window with the provided title.
-        /// </summary>
         public void OpenWindow()
         {
             Raylib.InitWindow(width, height, caption);
             Raylib.SetTargetFPS(frameRate);
         }
 
-        /// <summary>
-        /// Draws a grid on the screen.
-        /// </summary>
-        private void DrawGrid()
-        {
-            for (int x = 0; x < width; x += cellSize)
-            {
-                Raylib.DrawLine(x, 0, x, height, Raylib_cs.Color.GRAY);
-            }
-            for (int y = 0; y < height; y += cellSize)
-            {
-                Raylib.DrawLine(0, y, width, y, Raylib_cs.Color.GRAY);
-            }
-        }
+        /// Draws a grid on the screen. This function is not used
+        // private void DrawGrid()
+        // {
+        //     for (int x = 0; x < width; x += cellSize)
+        //     {
+        //         Raylib.DrawLine(x, 0, x, height, Raylib_cs.Color.GRAY);
+        //     }
+        //     for (int y = 0; y < height; y += cellSize)
+        //     {
+        //         Raylib.DrawLine(0, y, width, y, Raylib_cs.Color.GRAY);
+        //     }
+        // }
 
-        /// <summary>
         /// Converts the given color to it's Raylib equivalent.
-        /// </summary>
-        /// <param name="color">The color to convert.</param>
-        /// <returns>A Raylib color.</returns>
         private Raylib_cs.Color ToRaylibColor(Casting.Color color)
         {
             int r = color.GetRed();
