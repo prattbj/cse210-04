@@ -7,6 +7,7 @@ namespace Game.Casting
         public Player() 
         {
             setText("#");
+            setY(465);
         }
 
         public void SetPosition() 

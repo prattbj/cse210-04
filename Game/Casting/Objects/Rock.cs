@@ -4,7 +4,7 @@ namespace Game.Casting
     {
         public Rock()
         {
-            setText("▯");
+            setText("0");
             setScoreIncrement(-getVelocity());
         }
     }
