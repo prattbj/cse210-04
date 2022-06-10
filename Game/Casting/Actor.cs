@@ -29,6 +29,11 @@ namespace Game.Casting
             y += change;
         }
 
+        public void setColor(Color color)
+        {
+            this.color = color;
+        }
+
         public int getX()
         {
             return this.x;

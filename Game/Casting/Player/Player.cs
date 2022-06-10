@@ -8,6 +8,8 @@ namespace Game.Casting
         {
             setText("#");
             setY(465);
+            Color color = new Color(255, 255, 255);
+            setColor(color);
         }
 
         public void SetPosition() 

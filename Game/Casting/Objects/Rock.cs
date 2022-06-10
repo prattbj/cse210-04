@@ -4,8 +4,10 @@ namespace Game.Casting
     {
         public Rock()
         {
-            setText("▯");
+            setText("0");
             setScoreIncrement(-getVelocity());
+            Color color = new Color(50, 50, 50);
+            setColor(color);
         }
     }
 }
