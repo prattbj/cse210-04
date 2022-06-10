@@ -1,15 +1,15 @@
 # cse210-04
 
-Authors:
+# Authors:
         Jake Edwards
         Ben Pratt
         Josh Johnson
 
-Description:
+# Description:
         A game in which the user will collect gems and avoid rocks to get the highest possible score.
         This game is endless, with scaling difficulty. Objects that move faster help or hurt more.
 
-Class overviews:
+# Class overviews:
         KeyboardService     - handles inputs from the user
         VideoService        - creates the game window and pushes changes to it
         Program             - initializes the game
