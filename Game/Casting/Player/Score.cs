@@ -15,6 +15,11 @@ namespace Game.Casting
             updateScoreText();
         }   
 
+        public void setScore(int score) {
+            this.score = score;
+            updateScoreText();
+        }
+
         private void updateScoreText() {
             this.setText($"Score: {this.score}");
         }
