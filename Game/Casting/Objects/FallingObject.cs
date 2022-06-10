@@ -9,7 +9,7 @@ namespace Game.Casting
         public FallingObject()
         {
             this.velocity = random.Next(1, 5);
-            
+            setX(random.Next(1, 800));
         }
         public int getScore()
         {

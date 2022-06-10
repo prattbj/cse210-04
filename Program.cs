@@ -18,8 +18,7 @@ namespace Greed
             Raylib.InitWindow(800, 480, "Greed");
             Raylib.SetTargetFPS(60); 
             int yMax = 15;
-            Gem gem = new Gem();
-            cast.AddActor("fallingobject", gem);
+            
             int y = 0;
 
             

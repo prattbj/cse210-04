@@ -16,6 +16,8 @@ namespace Game.Directing
         private KeyboardService keyboardService = null;
         private VideoService videoService = null;
 
+        private Random random = new Random();
+
 
         /// <summary>
         /// Constructs a new instance of Director using the given KeyboardService and VideoService.
@@ -77,6 +79,21 @@ namespace Game.Directing
                     score.changeScore(o.getVelocity());
                 }
             }
+
+            if (random.Next(1, (1 + 1/score.getScore())) == 1)
+            {
+                //create gem or rock
+                if (random.Next(1, 2) == 1)
+                {
+                    Gem gem = new Gem();
+                    cast.AddActor("fallingobject", gem);
+                } else
+                {
+                    Rock rock = new Rock();
+                    cast.AddActor("fallingobject", rock);
+                }
+            }
+
         }
 
         /// <summary>
