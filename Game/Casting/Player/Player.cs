@@ -1,5 +1,7 @@
 namespace Game.Casting
-{
+{   
+    //Player holds the direction of the player object and sets
+    //its color, text, and y value when it is created.
     class Player : Actor
     {
         private int direction = 0;
