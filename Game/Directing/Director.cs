@@ -37,6 +37,10 @@ namespace Game.Directing
         public void StartGame(Cast cast)
         {
             videoService.OpenWindow();
+            Player player = new Player();
+            Score score = new Score();
+            cast.AddActor("player", player);
+            cast.AddActor("score", score);
             while (videoService.IsWindowOpen())
             {
                 GetInputs(cast);
@@ -69,7 +73,6 @@ namespace Game.Directing
             player.SetPosition();
             
 
-            
             foreach (Actor actor in fallingObject)
             {
                 FallingObject o = (FallingObject) actor;
@@ -77,6 +80,9 @@ namespace Game.Directing
                 if (player.getX().Equals(o.getX()) && player.getY().Equals(o.getY()))
                 {
                     score.changeScore(o.getVelocity());
+                } else if (o.getY() == 485)
+                {
+                    cast.RemoveActor("fallingobject", o);
                 }
             }
 
