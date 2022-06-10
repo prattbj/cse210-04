@@ -1,6 +1,7 @@
 namespace Game.Casting
 {
     // Score class inherits Actor because it will be drawn to the screen
+    // Holds and manipulates the score
     class Score : Actor{
         // Initiate score without a value
         private int score;
