@@ -4,6 +4,7 @@ namespace Game.Casting
     {
         private int direction = 0;
 
+        // Creates an instance of the player with the given values
         public Player() 
         {
             setText("#");
@@ -12,11 +13,13 @@ namespace Game.Casting
             setColor(color);
         }
 
+        // Sets the x position of the player
         public void SetPosition() 
         {
             setX(this.direction * 5);
         }
 
+        // Used in GetInputs to change the direction the player moves
         public void SetDirection(int direction)
         {
             this.direction = direction;

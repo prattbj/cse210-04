@@ -17,7 +17,7 @@ namespace Greed
         static void Main(string[] args)
         {
             // Start the game
-            KeyboardService keyboardService = new KeyboardService(15);
+            KeyboardService keyboardService = new KeyboardService();
             VideoService videoService = new VideoService("Greed", 800, 480, 15, 60, false);
             Director director = new Director(keyboardService, videoService);
             director.StartGame(cast);
