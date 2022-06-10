@@ -80,6 +80,7 @@ namespace Game.Directing
                 if (player.getX().Equals(o.getX()) && player.getY().Equals(o.getY()))
                 {
                     score.changeScore(o.getVelocity());
+                    cast.RemoveActor("fallingobject", o);
                 } else if (o.getY() == 485)
                 {
                     cast.RemoveActor("fallingobject", o);
