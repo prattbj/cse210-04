@@ -71,7 +71,11 @@ namespace Game.Directing
             Score score = (Score) cast.GetFirstActor("score");
             Player player = (Player) cast.GetFirstActor("player");
             List<Actor> fallingObject = cast.GetActors("fallingobject");
-            if (player.getX() <= 780 && keyboardService.GetDirection() == 1 || player.getX() >= 5 && keyboardService.GetDirection() == -1) {
+            // If player X position is less than 780 pixels (right edge of the screen) and trying to move left
+            //  OR player X position is greater than 5 pixels (left edge of the screen) and trying to move right
+            //  THEN move the player along the X axis according to user keyboard input
+            if (player.getX() <= 780 && keyboardService.GetDirection() == 1
+            || player.getX() >= 5 && keyboardService.GetDirection() == -1) {
                 player.SetPosition();
             }
             
