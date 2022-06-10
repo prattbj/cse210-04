@@ -91,11 +91,11 @@ namespace Game.Casting
         /// </summary>
         /// <param name="group">The group name.</param>
         /// <param name="actor">The actor to remove.</param>
-        public void RemoveActor(string group, Actor actor)
+        public void RemoveActor(string group, Actor actor, int index)
         {
             if (actors.ContainsKey(group))
             {
-                actors[group].Remove(actor);
+                actors[group].RemoveAt(index);
             }
         }
 

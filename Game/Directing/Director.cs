@@ -79,23 +79,28 @@ namespace Game.Directing
                 player.SetPosition();
             }
             
-
+            int i = 0;
             foreach (Actor actor in fallingObject)
             {
                 FallingObject o = (FallingObject) actor;
                 o.setPosition();
-                if (player.getX().Equals(o.getX()) && player.getY().Equals(o.getY()))
+                if ((((player.getX() + 2) > o.getX()) && ((player.getY() - 2) < o.getY()))&& ((player.getY() + 2) > o.getY()) && ((player.getY() - 2) < o.getY()))
                 {
                     score.changeScore(o.getScore());
-                    cast.RemoveActor("fallingobject", o);
+                    if (score.getScore() < 0)
+                    {
+                        score.setScore(0);
+                    }
+                    cast.RemoveActor("fallingobject", o, i);
                 } else if (o.getY() == 485)
                 {
-                    cast.RemoveActor("fallingobject", o);
+                    cast.RemoveActor("fallingobject", o, i);
                 }
+                i++;
             }
 
             try {
-                if (random.Next(1, (1 + 1/(score.getScore() + 1))) == 1)
+                if (random.Next(1, (2 + 20/(score.getScore() + 1))) == 1)
                 {
                     //create gem or rock
                     if (random.Next(1, 3) == 1)
