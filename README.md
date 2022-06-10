@@ -15,8 +15,8 @@ Class overviews:
         Program             - initializes the game
         Director            - directs play, contains gameplay loop (input, update, output)
         Cast                - holds and manipulates a dictionary containing objects to be drawn to the screen
-        Score               - holds and manipulates the score
         Actor               - generic class for an object that will be drawn to the screen
+            Score               - holds and manipulates the score
             Player          - the character that responds to user input
             FallingObject   - an object that falls from the top of the screen
                 Rock        - an object that decrements the score when touched
