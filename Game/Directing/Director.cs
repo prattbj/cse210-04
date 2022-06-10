@@ -90,7 +90,7 @@ namespace Game.Directing
             if (random.Next(1, (1 + 1/(score.getScore() + 1))) == 1)
             {
                 //create gem or rock
-                if (random.Next(1, 2) == 1)
+                if (random.Next(1, 3) == 1)
                 {
                     Gem gem = new Gem();
                     cast.AddActor("fallingobject", gem);
