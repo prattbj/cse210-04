@@ -61,28 +61,13 @@ namespace Game.Directing
             player.SetDirection(direction);     
         }
 
-        /// <summary>
-        /// Updates the player's position and the position of the falling objects
-        /// </summary>
-        /// <param name="cast">The given cast.</param>
-        private void DoUpdates(Cast cast)
+        private void HandleCollision(Cast cast)
         {
             Score score = (Score) cast.GetFirstActor("score");
             Player player = (Player) cast.GetFirstActor("player");
             List<Actor> fallingObject = cast.GetActors("fallingobject");
-            // If player X position is less than 780 pixels (right edge of the screen) and trying to move left
-            //  OR player X position is greater than 5 pixels (left edge of the screen) and trying to move right
-            //  THEN move the player along the X axis according to user keyboard input
-            if (player.getX() <= 780 && keyboardService.GetDirection() == 1
-            || player.getX() >= 5 && keyboardService.GetDirection() == -1) {
-                player.SetPosition();
-            }
-            //Create i for iteration in order to remove the correct falling objects from the
-            //cast (based on index). For each falling object, set the position, then check for 
-            //a collision within 15 px of the player if the object is in a certain range of y
-            //values at the bottom of the screen.
-            //Deletes the object if there is a collision or if it goes off the screen.
-            //Changes the score if there is a collision.
+
+            // Checks for collisions within 15 pixels of the player, then deletes the object and updates the score
             int i = 0;
             foreach (Actor actor in fallingObject)
             {
@@ -102,6 +87,23 @@ namespace Game.Directing
                 }
                 i++;
             }
+        }
+
+        private void CheckBoundary(Cast cast)
+        {
+            Player player = (Player) cast.GetFirstActor("player");
+
+            // Stops the player from moving off the screen
+            if (player.getX() <= 780 && keyboardService.GetDirection() == 1
+            || player.getX() >= 5 && keyboardService.GetDirection() == -1) {
+                player.SetPosition();
+            }   
+        }
+
+        private void SetRate(Cast cast)
+        {
+            Score score = (Score) cast.GetFirstActor("score");
+            
             //Need to catch divide by zero exceptions, so we use try - catch. 
             //As the score increases, the function (2 + 200/(score + 1)) tends to 1 and more
             //rocks and gems will randomly spawn because of the random function.
@@ -122,6 +124,17 @@ namespace Game.Directing
             } catch (DivideByZeroException) {
                 score.changeScore(0);
             }
+        }
+
+        /// <summary>
+        /// Updates the player's position and the position of the falling objects
+        /// </summary>
+        /// <param name="cast">The given cast.</param>
+        private void DoUpdates(Cast cast)
+        {
+            HandleCollision(cast);
+            CheckBoundary(cast);  
+            SetRate(cast);            
         }
 
         /// <summary>
